@@ -21,18 +21,18 @@ QuoteCrafter is a web application that generates inspirational quotes and accomp
    cd quotecrafter
    ```
 3. Install the packages:
-    '''
+    ```
     npm i
-    '''
+    ```
 4. Setup env file:
-    '''
+    ```
     PORT=3000
     OPENAI_API_KEY=
-    '''
+    ```
 5. Run the server:
-    '''
+    ```
     node server.js
-    '''
+    ```
 
 
 
