@@ -1,0 +1,340 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    2% {
+        background-position: 2% 2%;
+    }
+    4% {
+        background-position: 4% 4%;
+    }
+    6% {
+        background-position: 6% 6%;
+    }
+    8% {
+        background-position: 8% 8%;
+    }
+    10% {
+        background-position: 10% 10%;
+    }
+    12% {
+        background-position: 12% 12%;
+    }
+    14% {
+        background-position: 14% 14%;
+    }
+    16% {
+        background-position: 16% 16%;
+    }
+    18% {
+        background-position: 18% 18%;
+    }
+    20% {
+        background-position: 20% 20%;
+    }
+    22% {
+        background-position: 22% 22%;
+    }
+    24% {
+        background-position: 24% 24%;
+    }
+    26% {
+        background-position: 26% 26%;
+    }
+    28% {
+        background-position: 28% 28%;
+    }
+    30% {
+        background-position: 30% 30%;
+    }
+    32% {
+        background-position: 32% 32%;
+    }
+    34% {
+        background-position: 34% 34%;
+    }
+    36% {
+        background-position: 36% 36%;
+    }
+    38% {
+        background-position: 38% 38%;
+    }
+    40% {
+        background-position: 40% 40%;
+    }
+    42% {
+        background-position: 42% 42%;
+    }
+    44% {
+        background-position: 44% 44%;
+    }
+    46% {
+        background-position: 46% 46%;
+    }
+    48% {
+        background-position: 48% 48%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    52% {
+        background-position: 52% 52%;
+    }
+    54% {
+        background-position: 54% 54%;
+    }
+    56% {
+        background-position: 56% 56%;
+    }
+    58% {
+        background-position: 58% 58%;
+    }
+    60% {
+        background-position: 60% 60%;
+    }
+    62% {
+        background-position: 62% 62%;
+    }
+    64% {
+        background-position: 64% 64%;
+    }
+    66% {
+        background-position: 66% 66%;
+    }
+    68% {
+        background-position: 68% 68%;
+    }
+    70% {
+        background-position: 70% 70%;
+    }
+    72% {
+        background-position: 72% 72%;
+    }
+    74% {
+        background-position: 74% 74%;
+    }
+    76% {
+        background-position: 76% 76%;
+    }
+    78% {
+        background-position: 78% 78%;
+    }
+    80% {
+        background-position: 80% 80%;
+    }
+    82% {
+        background-position: 82% 82%;
+    }
+    84% {
+        background-position: 84% 84%;
+    }
+    86% {
+        background-position: 86% 86%;
+    }
+    88% {
+        background-position: 88% 88%;
+    }
+    90% {
+        background-position: 90% 90%;
+    }
+    92% {
+        background-position: 92% 92%;
+    }
+    94% {
+        background-position: 94% 94%;
+    }
+    96% {
+        background-position: 96% 96%;
+    }
+    98% {
+        background-position: 98% 98%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    background-size: 200% 200%; /* Ensures smooth gradient transition */
+    animation: gradientAnimation 30s linear infinite; /* Adjusted duration for a super smooth effect */
+}
+
+
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#loader {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #ffffff;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#quoteImages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.quote-image-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure items are spread out */
+    height: 100%; /* Ensure the container takes up the full height */
+}
+
+.quote-image-container:hover {
+    transform: translateY(-5px);
+}
+
+.quote-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.quote-text {
+    padding: 1rem;
+    font-style: italic;
+    text-align: center;
+    color: #f5f5f5; /* Light grey color for better contrast */
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    line-height: 1.4; /* Improved line height for better text flow */
+    /* border-left: 4px solid #3498db; Modern border on the left */
+    /* background: rgba(0, 0, 0, 0.2);  */
+    margin: 0; /* Remove default margins */
+    padding: 1rem 1.5rem; /* Add more padding for a spacious look */
+    /* border-radius: 0 0 10px 10px; Rounded bottom corners for a modern touch */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); Slight shadow for depth */
+}
+
+.download-btn {
+    display: block;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.download-btn:hover {
+    background: #2980b9;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ... (previous styles remain unchanged) ... */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#enlarged-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    transform: scale(0.9);
+}
+
+#overlay.active #enlarged-image-container {
+    transform: scale(1);
+}
+
+#enlarged-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

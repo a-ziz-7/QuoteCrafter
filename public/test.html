@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteCrafter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>QuoteCrafter</h1>
+        <div class="input-container">
+            <input type="text" id="topicInput" placeholder="Enter a topic">
+            <button id="generateBtn">Generate Quotes and Images</button>
+        </div>
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Generating quotes and images...</p>
+        </div>
+        <div id="result">
+            <div id="quoteImages">
+                <div class="quote-image-container">
+                    <img src="img/output_image_0.png" alt="Generated image for Love" class="quote-image">
+                    <p class="quote-text">Love is the lighthouse guiding us through the stormy seas of life, illuminating the shores of connection even in the darkest nights.</p>
+                    <a href="img/output_image_0.png" download="Love_quote_1.jpg" class="download-btn">Download Image</a>
+                </div>
+                <div class="quote-image-container">
+                    <img src="img/output_image_1.png" alt="Generated image for Love" class="quote-image">
+                    <p class="quote-text">In a world chasing pixels and likes, true love is more like a handwritten letter—authentic, vulnerable, and timeless.</p>
+                    <a href="img/output_image_1.png" download="Love_quote_2.jpg" class="download-btn">Download Image</a>
+                </div>
+                <div class="quote-image-container">
+                    <img src="img/output_image_2.png" alt="Generated image for Love" class="quote-image">
+                    <p class="quote-text">Love is not merely a comfort; it's the audacious act of diving into the chaos of another's soul, risking our own serenity for beauty.</p>
+                    <a href="img/output_image_2.png" download="Love_quote_3.jpg" class="download-btn">Download Image</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="hidden">
+        <div id="enlarged-image-container">
+            <img id="enlarged-image" src="" alt="Enlarged image">
+        </div>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>
