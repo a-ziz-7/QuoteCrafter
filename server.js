@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const OpenAI = require("openai");
 require('dotenv').config();
-const openai = new OpenAI( {apiKey: process.env.OPENAI_API_KEY} );
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const sharp = require('sharp');
 const axios = require('axios');
 const fs = require('fs').promises;
@@ -31,11 +31,11 @@ async function generateQuotes(topic) {
   Format the output as three distinct quotes, separated by the '|' character. Do not include attribution or quotation marks.`;
 
   const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-          { role: "system", content: "You are a helpful assistant." },
-          { role: "user", content: quoteGenerationPrompt },
-      ],
+    model: "gpt-4o-mini",
+    messages: [
+      { role: "system", content: "You are a helpful assistant." },
+      { role: "user", content: quoteGenerationPrompt },
+    ],
   });
   return completion.choices[0];
 }
@@ -63,9 +63,9 @@ function quoteSplitter(quotes) {
   let arr = []
   let spl = quotes.split('|').map(quote => quote.trim());
   spl.forEach(q => {
-      const proper_q = q.replace(/"/g, '');
-      // console.log(proper_q);
-      arr.push(proper_q);
+    const proper_q = q.replace(/"/g, '');
+    // console.log(proper_q);
+    arr.push(proper_q);
   });
   return arr;
 }
@@ -168,8 +168,8 @@ async function combineQuoteAndImage(quote, imageBuffer, outputPath, topic) {
 
 async function generateImage(topic, quote, indexx) {
   const imagePrompt = createImagePrompt(topic, quote);
-  const image = await openai.images.generate({ 
-    model: d_model, 
+  const image = await openai.images.generate({
+    model: d_model,
     // size: '512x512', 
     size: '1024x1024',
     prompt: imagePrompt
@@ -182,7 +182,7 @@ async function generateImage(topic, quote, indexx) {
   let path = `img/output_image_${indexx}.png`;
   // console.log(path);
   // Combine the image with the quote
-  const c = await combineQuoteAndImage(quote, imageBuffer, 'public/'+path, topic);
+  const c = await combineQuoteAndImage(quote, imageBuffer, 'public/' + path, topic);
   // console.log(c, 'c');
   // console.log(path);
   sleep();
@@ -195,7 +195,7 @@ async function deleteImagesAndLogDir() {
     const files = await fs.readdir('public/img');
 
     // Delete each file in the directory
-    const deletePromises = files.map(file => 
+    const deletePromises = files.map(file =>
       fs.unlink(path.join('public/img', file))
     );
     await Promise.all(deletePromises);
@@ -207,7 +207,7 @@ async function deleteImagesAndLogDir() {
 app.post('/generate', async (req, res) => {
   // refresh the page
   try {
-    
+
     await deleteImagesAndLogDir();
 
     const { topic } = req.body;
@@ -216,8 +216,8 @@ app.post('/generate', async (req, res) => {
     console.log(quotes);
     let imagePromises = [];
     for (let i = 0; i < quotes.length; i++) {
-        let promise = generateImage(topic, quotes[i], i);
-        imagePromises.push(promise);
+      let promise = generateImage(topic, quotes[i], i);
+      imagePromises.push(promise);
     }
     const images = await Promise.all(imagePromises);
     let imageUrls = [
@@ -234,7 +234,7 @@ app.post('/generate', async (req, res) => {
     sleep();
     res.json({ topic, result });
     imagePromises = [];
-    
+
   } catch (error) {
     console.error('Error:', error);
     res.status(500).json({ error: 'An error occurred' });
