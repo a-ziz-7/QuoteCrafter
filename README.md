@@ -9,6 +9,8 @@ QuoteCrafter is a web application that generates inspirational quotes and accomp
 - Interactive image viewing with enlarge functionality
 - Download options for generated quote images
 
+## Gallery
+Check out the project gallery at [link](https://a-ziz-7.github.io/QuoteCrafter/).
 
 ### Installation
 
