@@ -1,10 +1,18 @@
 import os
+from dotenv import load_dotenv
+
+# Load the .env file
+load_dotenv()
+
+array_string = os.getenv("SECRETS").split(",")
 
 def list_quotes_folder(folder_path):
     try:
         files = os.listdir(folder_path)
         for file in files:
-            print(f'"{file}",')
+            for secret in array_string:
+                if secret not in file:
+                    print(f'"{file}",')
     except FileNotFoundError:
         print(f"The folder {folder_path} does not exist.")
 
