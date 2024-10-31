@@ -6,7 +6,6 @@ QuoteCrafter is a web application that generates inspirational quotes and accomp
 
 - Generate quotes and images based on user-specified topics
 - Responsive design for optimal viewing on various devices
-- Interactive image viewing with enlarge functionality
 - Download options for generated quote images
 
 ## Gallery
@@ -28,7 +27,7 @@ Check out the project gallery at [QuoteCrafter Gallery](https://a-ziz-7.github.i
     ```
 4. Setup env file:
     ```
-    PORT=3000
+    PORT=
     OPENAI_API_KEY=
     ```
 5. Run the server:
