@@ -10,9 +10,8 @@ def list_quotes_folder(folder_path):
     try:
         files = os.listdir(folder_path)
         for file in files:
-            for secret in array_string:
-                if secret not in file:
-                    print(f'"{file}",')
+            if not any(secret in file for secret in array_string):
+                print(f'"{file}",')
     except FileNotFoundError:
         print(f"The folder {folder_path} does not exist.")
 
