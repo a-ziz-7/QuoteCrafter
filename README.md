@@ -6,11 +6,10 @@ QuoteCrafter is a web application that generates inspirational quotes and accomp
 
 - Generate quotes and images based on user-specified topics
 - Responsive design for optimal viewing on various devices
-- Interactive image viewing with enlarge functionality
 - Download options for generated quote images
 
 ## Gallery
-Check out the project gallery at [link](https://a-ziz-7.github.io/QuoteCrafter/).
+Check out the project gallery at [QuoteCrafter Gallery](https://a-ziz-7.github.io/QuoteCrafter/).
 
 ### Installation
 
@@ -28,22 +27,10 @@ Check out the project gallery at [link](https://a-ziz-7.github.io/QuoteCrafter/)
     ```
 4. Setup env file:
     ```
-    PORT=3000
+    PORT=
     OPENAI_API_KEY=
     ```
 5. Run the server:
     ```
     node server.js
     ```
-
-
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
